@@ -1,4 +1,4 @@
-//#define AFSDK_WIN_DEBUG
+#define AFSDK_WIN_DEBUG
 //#define UNITY_WSA_10_0
 //#define ENABLE_WINMD_SUPPORT
 

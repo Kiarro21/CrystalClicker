@@ -6,17 +6,13 @@ using UnityEngine.UI;
 
 public class ServicesInit : MonoBehaviour, IAppsFlyerConversionData
 {
-    [SerializeField] private string _devKey;
+    private const string _devKey = "e7z445jUKxaoAtTeqqyY9d";
 
-    public Text _text;
-
-    void Start()
+    private void Awake()
     {
-        /* AppsFlyer.setDebugLog(true); */
+        AppsFlyer.setIsDebug(true);
         AppsFlyer.initSDK(_devKey, "", this);
         AppsFlyer.startSDK();
-
-        _text.text = AppsFlyer.getAppsFlyerId();
     }
 
     public void onConversionDataSuccess(string conversionData)
